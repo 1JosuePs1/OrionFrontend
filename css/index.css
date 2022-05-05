@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb {
 /*=============NAV=============*/
 
 .sticky.is-sticky.navbar {
-  position: fixed;
+  position: static;
   left: 0;
   right: 0;
   top: 0;
