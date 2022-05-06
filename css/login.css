@@ -17,7 +17,7 @@ body {
 }
 
 .nav-image {
-  width: 150px;
+  width: 250px;
   margin: 10px auto;
 
   align-items: center;
@@ -26,7 +26,6 @@ body {
 .navbar-logo {
   width: 250px;
 }
-
 
 /*=====form inicial==========*/
 
@@ -47,7 +46,6 @@ body {
 
 
 /* Formulario */
-
 form.form_contact {
   width: 30%;
   margin-left: auto;
@@ -287,16 +285,18 @@ form.form_contact input[type="submit"]:hover {
   /*float: right; */
 }
 
-label, .cambio-de-pagina {
+label,
+.cambio-de-pagina {
   color: #444444;
   margin: 0%;
 
   transition: 333ms;
 }
 
-.cambio-de-pagina:hover{
+.cambio-de-pagina:hover {
   color: #000000;
 }
+
 
 
 /*==================mostrar contraseña=================*/
@@ -307,7 +307,7 @@ label, .cambio-de-pagina {
   height: 28px;
 
   position: absolute;
-  top: 71.1%;
+  top: 57%;
   left: 88%;
   transform: translate(-50%, -50%);
 
