@@ -28,12 +28,20 @@ $(document).ready(function () {
             $('#correo').css("border-bottom-color", "#d1d1d1")
         }
 
-        // Validado Email ==============================
+        // Validado contraseña ==============================
         if ($('#pass').val() == '') {
             errores += '<p><i class="fas fa-key"></i>Escriba su contraseña</p>';
             $('#pass').css("border-bottom-color", "#F14B4B")
         } else {
             $('#pass').css("border-bottom-color", "#d1d1d1")
+        }
+
+        // Validado confirmar contraseña ==============================
+        if ($('#pass-confi').val() == '') {
+            errores += '<p><i class="fas fa-key"></i>Escriba la confirmacion de su contraseña correcta</p>';
+            $('#pass-confi').css("border-bottom-color", "#F14B4B")
+        } else {
+            $('#pass-confi').css("border-bottom-color", "#d1d1d1")
         }
 
         // ENVIANDO MENSAJE ============================
