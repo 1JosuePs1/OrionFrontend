@@ -33,22 +33,24 @@
 
 <body>
 
-        <nav class="nav-registro">
-            <div class="content-footer">
-                <a class="navbar-brand" href="#"><img class="navbar-logo" src="./img/logo-white.png" alt="Orion S4"></a>
-            </div>
-        </nav>
+    <nav class="nav-registro">
+        <div class="content-footer">
+            <a class="navbar-brand" href="#"><img class="navbar-logo" src="./img/logo-white.png" alt="Orion S4"></a>
+        </div>
+    </nav>
 
     <form class="form_contact">
 
         <h1 class="title-form">REGISTRO</h1>
 
-        <div class="user_info" >
+        <div class="user_info">
             <label for="names"><i class="fas fa-user-alt"></i>Nombre</label>
             <input type="text" id="names" name="nombre" required>
 
             <label for="tel"><i class="fas fa-phone"></i>Telefono</label>
-            <input type="tel" id="telefono" name="telefono" required>
+            <input type="tel" maxlength="20"
+                onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" id="telefono"
+                name="telefono" required>
 
             <label for="email"><i class="fas fa-at"></i>Correo electronico</label>
             <input type="email" id="correo" name="correo" required>
@@ -56,8 +58,12 @@
             <label for="pass"><i class="fas fa-key"></i>Contraseña</label>
             <input type="password" id="pass" name="pass" required>
 
+            <label for="pass"><i class="fas fa-key"></i>Confirmar contraseña</label>
+            <input type="password" id="pass-confi" name="pass" required>
+
             <div class="roundedTwo">
-                <input type="checkbox" onclick="Toggle()" value="None" id="roundedTwo" name="mostrar contraseña" checked />
+                <input type="checkbox" onclick="Toggle()" value="None" id="roundedTwo" name="mostrar contraseña"
+                    checked />
                 <label for="roundedTwo"></label>
             </div>
 
@@ -68,6 +74,10 @@
         </div>
     </form>
 
+
+    <script>
+        
+    </script>
 
     <script>
         function Toggle() {
