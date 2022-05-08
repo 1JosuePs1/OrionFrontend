@@ -37,16 +37,21 @@ $(document).ready(function () {
         }
 
         // Validado confirmar contraseña ==============================
+
         if ($('#pass-confi').val() == '') {
             errores += '<p><i class="fas fa-key"></i>Escriba la confirmacion de su contraseña correcta</p>';
             $('#pass-confi').css("border-bottom-color", "#F14B4B")
+            valid1 = true
         } else {
             $('#pass-confi').css("border-bottom-color", "#d1d1d1")
+            valid1 = true
         }
 
+        
         // ENVIANDO MENSAJE ============================
         if (errores == '' == false) {
-            var mensajeModal = '<div class="modal_wrap">' +
+            let mensajeModal = 
+                '<div class="modal_wrap">' +
                 '<div class="mensaje_modal">' +
                 '<h3>Errores encontrados</h3>' +
                 errores +
@@ -56,6 +61,28 @@ $(document).ready(function () {
 
             $('body').append(mensajeModal);
         }
+
+        // Confirmacion de contraseña
+        const d = document 
+        const btnRegistro = d.getElementById("btnSend")
+
+        let psw = d.getElementById("pass")
+        let pswConfirm = d.getElementById("pass-confi")
+
+        if(psw.value !== pswConfirm.value)
+            alert(
+                `Confirma que ambas contraseñas sean correctas`
+                )
+        
+            
+
+
+
+
+
+    /*------------------------------------------
+    DELEGACION DE EVENTOS FIN
+    --------------------------------------------*/
 
         // CERRANDO MODAL ==============================
         $('#btnClose').click(function () {
