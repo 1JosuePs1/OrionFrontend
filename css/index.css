@@ -31,6 +31,11 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
 }
 
+/*CONTENEDOR DE CADA SECCIÓN*/
+.overall-block{
+  padding-bottom: 50px;
+}
+
 
 /*=============NAV=============*/
 
@@ -72,7 +77,7 @@ nav {
 .nav-options:hover {
   color: #c1c1c1;
   text-decoration: none;
-
+  
   
 }
 .nav-options:hover::after{
@@ -129,6 +134,7 @@ nav {
 }
 
 
+
 /*================slider, yo no lo cree pero es facil de modificar====================*/
 
 #sliderFrame {
@@ -136,6 +142,7 @@ nav {
   width: 100%;
   height: 100vh;
   position: relative;
+  margin-bottom: 50px;
 }
 
 #sliderFrame #next,
@@ -410,13 +417,20 @@ nav {
 /*===========slider catalogo============*/
 
 .title-products {
-  padding: 50px 0px 10px 0px;
+  
   color: #444444;
-
-  font-size: 40px;
+  position: relative;
+  font-size: 2.8rem;
   font-weight: bold;
   text-align: center;
+  margin-bottom:3rem ;
+  
+  
+  
 }
+
+
+
 
 .slider-catalogo {
   display: flex;
@@ -443,7 +457,9 @@ nav {
   -webkit-box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.22);
   box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.22);
 }
-
+.car-catalogo:hover{
+ background-color: #00000041;
+}
 .car-image {
   width: 200px;
   height: 110px;
@@ -469,6 +485,17 @@ nav {
 
   gap: 10px 10px;
   margin: 50px;
+}
+
+.after-catalago::after{
+  content: "";
+  position: absolute;
+background-color: #000000;
+width: 40%;
+right: 30%;
+height: 1px;
+ bottom:-1px;
+margin:0 auto;
 }
 
 
@@ -523,6 +550,18 @@ nav {
 .oferta-image{
   width: 150px;
   height: 150px;
+  
+}
+.after-oferta::after{
+  
+    content: "";
+    position: absolute;
+  background-color: #000000;
+  width: 17%;
+  right: 41%;
+  height: 1px;
+   bottom:-1px;
+  
 }
 
 /*============footer============*/
