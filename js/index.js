@@ -31,8 +31,3 @@ $(document).ready(function () {
         stickyToggle(sticky, stickyWrapper, $(window));
     });
 });
-
-
-
-
-

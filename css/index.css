@@ -1,10 +1,19 @@
-/*font 
-font-family: 'Plus Jakarta Sans', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Ubuntu Condensed', sans-serif;
-*/
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&family=Roboto:wght@700&family=Ubuntu+Condensed&display=swap');
+/*---------Fuentes de text*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto:wght@100;400&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Flex:opsz,wght@8..144,300&family=Roboto:wght@100;400&display=swap');
+
+@font-face {
+  font-family: "myFont-title-koulen";
+  src: url("../img/fuentes/Koulen-Regular.ttf");
+}
+
+@font-face {
+  font-family: "myFont-title-lemon-milk";
+  src: url("../img/fuentes/LEMONMILK-Regular.otf");
+}
+
+/*====================================================*/
 
 body,
 html {
@@ -35,7 +44,7 @@ body::-webkit-scrollbar-thumb {
 /*=============NAV=============*/
 
 .sticky.is-sticky.navbar {
-  position: static;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -46,6 +55,11 @@ body::-webkit-scrollbar-thumb {
 nav {
   background: #181818;
   min-height: 85px;
+}
+
+.navbar {
+  z-index: 1;
+  border-radius: 0px;
 }
 
 .logo-class {
@@ -59,33 +73,30 @@ nav {
 
 .nav-options {
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 100;
   font-family: 'Roboto Flex', sans-serif;
-  position:relative;
-  /*font-family: 'Plus Jakarta Sans', sans-serif;*/
- /* font-family: 'Roboto', sans-serif;*/
- /*font-family: 'Ubuntu Condensed', sans-serif;*/
+  position: relative;
 }
-
 
 .nav-options:hover {
   color: #c1c1c1;
   text-decoration: none;
 
-  
-}
-.nav-options:hover::after{
- content: "";
- position: absolute;
- bottom:-5px;
- left:0;
 
- background-color: #ffffff;
- width: 100%;
- height: 1px;
- color: #c1c1c1;
- text-decoration: none;
+}
+
+.nav-options:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
+  background-color: #ffffff;
+  width: 100%;
+  height: 1px;
+  color: #c1c1c1;
+  text-decoration: none;
 
 }
 
@@ -101,13 +112,13 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 100vh;
+  height: 90vh;
   box-sizing: content-box;
 }
 
 .banner-article-principal {
   position: relative;
-  top: 30%;
+  top: 55%;
 }
 
 .text-banner-principal {
@@ -127,6 +138,385 @@ nav {
   font-size: 40px;
   color: #ffffff;
 }
+
+/*===========slider-catalogo=================*/
+
+
+.title-products {
+  padding: 30px 0px 0px 0px;
+  color: #444444;
+
+  margin: 1% auto;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.fa-arrow-pointer {
+  position: relative;
+
+  animation-name: animacion-de-cursor;
+  animation-duration: 3.1s;
+  animation-iteration-count: infinite;
+  padding-left: 5px;
+}
+
+@keyframes animacion-de-cursor {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  50% {
+    left: 20px;
+    top: 0px;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+/* contenido del slider */
+.div-slider-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 4px 4px;
+
+  width: 270px;
+
+}
+
+.title-car-slider {
+  color: #444;
+  font-size: 20px;
+  font-weight: 500;
+
+  margin: 4px auto;
+  font-family: 'Roboto Flex', sans-serif;
+  text-align: center;
+}
+
+.price-car-slider {
+  color: #1f1f1f;
+  font-size: 25px;
+  font-weight: bold;
+
+  margin: 4px auto;
+  font-family: 'Roboto Flex', sans-serif;
+  text-align: center;
+}
+
+.border- {
+  border-bottom: 3px rgba(194, 194, 194, 0.628) solid;
+  width: 90%;
+  margin: 0% auto;
+}
+
+.imagen-del-slider {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+
+  border-radius: 10px;
+}
+
+/*--------final*/
+
+.slick-dots {
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.slick-dots li.slick-active button {
+  background-color: black;
+}
+
+.slick-dots li button {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: #999;
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+.slick-dots li :hover {
+  background-color: black;
+}
+
+/* flechas */
+.prev {
+  color: #999;
+  position: absolute;
+  top: 38%;
+  left: -2em;
+  font-size: 1.5em;
+}
+
+.prev :hover {
+  cursor: pointer;
+  color: black;
+}
+
+.next {
+  color: #999;
+  position: absolute;
+  top: 38%;
+  right: -2em;
+  font-size: 1.5em;
+}
+
+.next :hover {
+  cursor: pointer;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  .next {
+    display: none !important;
+  }
+}
+
+/*=======textos del slider===========*/
+
+.banner-article-slider {
+  position: relative;
+  top: 10%;
+}
+
+.text-banner-slider {
+  margin: 0% auto;
+  padding-right: 80px;
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 800;
+
+  text-align: end;
+}
+
+.option-see-more-a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.option-see-more {
+  padding: 11px 15px 11px 15px;
+  margin-right: 80px;
+
+  color: #444444;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  width: 130px;
+
+  transition: 330ms;
+}
+
+.option-see-more:hover {
+  color: #d1d1d1;
+  background-color: #303030;
+  text-decoration: none;
+}
+
+/*============una pequeña introduccion del la pagina===============*/
+
+.car-introduccion {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px 10px;
+  margin: 10px;
+}
+
+
+.section-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 25%;
+}
+
+.text-intro {
+  width: 100%;
+
+  color: #444444;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: start;
+  font-family: 'Open Sans', sans-serif;
+
+  padding-bottom: 6px;
+
+
+}
+
+
+
+.see-more-intro {
+  padding: 7px 12px 7px 12px;
+  color: #ffffff;
+  background-color: #444444;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: start;
+
+  transition: 330ms;
+}
+
+.see-more-intro:hover {
+  text-decoration: none;
+  color: #cbcbcb;
+  background-color: #303030;
+}
+
+.intro-img {
+  width: 30%;
+}
+
+/*==========video y demas=============*/
+
+.content-info-video {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 0;
+}
+
+.video-desmostracion {
+  margin: 40px 0px 40px 0px;
+
+  width: 300px;
+
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.28) 6px 2px 16px 0px, rgba(0, 0, 0, 0.28) -6px -2px 16px 0px;
+
+}
+
+.content-info-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px 5px;
+
+  width: 350px;
+  padding: 2%;
+}
+
+.title-info-content {
+  color: #444444;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: start;
+
+  font-family: "myFont-title-koulen";
+}
+
+.content-info-p {
+  color: #444444;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: start;
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+/*================FJ43=================*/
+.render-show-fj43 {
+  height: 80vh;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px 50px;
+}
+
+.nombre-de-fondo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 99vw;
+
+  color: hsl(0, 0%, 90.2%);
+  font-size: 170PX;
+  font-weight: 500;
+  text-align: center;
+  font-family: "myFont-title-lemon-milk";
+
+  margin: 0% auto;
+  z-index: 1;
+
+}
+
+
+.content-car-info-fj43 {
+  z-index: 2;
+}
+
+.title-fj43 {
+  color: #303030;
+  font-size: 60PX;
+  font-weight: 500;
+  text-align: start;
+  font-family: "myFont-title-lemon-milk";
+}
+
+.ver-mas-fj43 {
+  color: #303030;
+  font-size: 20PX;
+  font-weight: 500;
+  text-align: start;
+  font-family: "myFont-title-lemon-milk";
+  
+  padding: 5px 10px 5px 10px;
+  border: #303030 2px solid;
+  margin-top: 10px;
+
+  transition: 333ms;
+}
+
+.ver-mas-fj43:hover{
+  text-decoration: none;
+  color: #303030;
+  padding: 5px 15px 5px 15px;
+}
+
+.car-image-fj43 {
+  z-index: 2;
+  width: 40%;
+}
+
+
 
 
 /*================slider, yo no lo cree pero es facil de modificar====================*/
@@ -361,173 +751,11 @@ nav {
   background-size: cover;
 }
 
-/*=======textos del slider===========*/
-
-.banner-article-slider {
-  position: relative;
-  top: 10%;
-}
-
-.text-banner-slider {
-  margin: 0% auto;
-  padding-right: 80px;
-  font-size: 40px;
-  color: #ffffff;
-  font-weight: 800;
-
-  text-align: end;
-}
-
-.option-see-more-a {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.option-see-more {
-  padding: 11px 15px 11px 15px;
-  margin-right: 80px;
-
-  color: #444444;
-  background-color: #ffffff;
-  border-radius: 10px;
-
-  font-size: 20px;
-  font-weight: 800;
-  text-align: center;
-  width: 130px;
-
-  transition: 330ms;
-}
-
-.option-see-more:hover {
-  color: #d1d1d1;
-  background-color: #303030;
-  text-decoration: none;
-}
-
-
-/*===========slider catalogo============*/
-
-.title-products {
-  padding: 50px 0px 10px 0px;
-  color: #444444;
-
-  font-size: 40px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.slider-catalogo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  gap: 30px 30px;
-  margin: 0px 0px 20px 0px;
-}
-
-.car-catalogo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 10px;
-
-  width: 200px;
-  height: 200px;
-
-  border-radius: 7px;
-  -webkit-box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.22);
-  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.22);
-}
-
-.car-image {
-  width: 200px;
-  height: 110px;
-
-}
-
-.name-car-model {
-  padding: 11px 15px 11px 15px;
-  color: #444444;
-
-  font-size: 20px;
-  font-weight: 800;
-  text-align: center;
-}
-
-/*============una pequeña introduccion del la pagina===============*/
-
-.car-introduccion {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  gap: 10px 10px;
-  margin: 50px;
-}
-
-
-.section-intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  width: 25%;
-}
-
-.text-intro {
-  width: 100%;
-
-  color: #444444;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: start;
-  font-family: 'Open Sans', sans-serif;
-  
-  
- 
-}
-
-
-
-.see-more-intro {
-  padding: 7px 12px 7px 12px;
-  color: #ffffff;
-  background-color: #444444;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 800;
-  text-align: start;
-
-  transition: 330ms;
-}
-
-.see-more-intro:hover {
-  text-decoration: none;
-  color: #cbcbcb;
-  background-color: #303030;
-}
-
-.intro-img {
-  width: 30%;
-}
-
-/*=====oferta==========*/
-
-.oferta-image{
-  width: 150px;
-  height: 150px;
-}
-
 /*============footer============*/
 
 footer {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -538,24 +766,52 @@ footer {
   background-color: #000000;
 
   height: 1%;
+
+  box-sizing: content-box;
+}
+
+.img-wheels {
+  position: absolute;
+
+  z-index: 1;
+  width: auto;
+  height: 100%;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+
+  box-sizing: content-box;
+}
+
+.img-wheels-dos {
+  position: absolute;
+
+  z-index: 1;
+  width: auto;
+  height: 100%;
+  top: 50%;
+  left: 73%;
+  transform: translate(-50%, -50%);
+
+  box-sizing: content-box;
 }
 
 .content-footer {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
-  gap: 0px 30px;
-  padding: 1px 0px 1px 0px;
+
+  gap: 3px 35px;
+  padding: 7px 0px 7px 0px;
 }
 
 .nav-options-social-med {
   color: #ffffff;
   font-size: 18px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family: 'Roboto Flex', sans-serif;
 
   transition: 330ms;
 }
@@ -563,4 +819,27 @@ footer {
 .nav-options-social-med:hover {
   color: #c1c1c1;
   text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .content-footer-words {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px 35px;
+    padding: 10px 0px 10px 0px;
+  }
+
+  .img-wheels {
+    width: 0%;
+    height: 0%;
+  }
+
+  .img-wheels-dos {
+    width: 0%;
+    height: 0%;
+  }
+
 }
