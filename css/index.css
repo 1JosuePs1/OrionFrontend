@@ -40,6 +40,11 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
 }
 
+/*CONTENEDOR DE CADA SECCIÓN*/
+.overall-block{
+  padding-bottom: 50px;
+}
+
 
 /*=============NAV=============*/
 
@@ -82,7 +87,6 @@ nav {
 .nav-options:hover {
   color: #c1c1c1;
   text-decoration: none;
-
 
 }
 
@@ -778,6 +782,7 @@ xpopup
 
 
 
+
 /*================slider, yo no lo cree pero es facil de modificar====================*/
 
 #sliderFrame {
@@ -785,6 +790,7 @@ xpopup
   width: 100%;
   height: 100vh;
   position: relative;
+  margin-bottom: 50px;
 }
 
 #sliderFrame #next,
