@@ -102,11 +102,11 @@ nav {
 
 /*====================pop up con buscador===================*/
 
-/* -------------------------------- 
+/* ============================
 
-xnugget info 
+INFO 
 
--------------------------------- */
+============================ */
 .cd-nugget-info {
   text-align: center;
   position: absolute;
@@ -143,11 +143,11 @@ xnugget info
   fill: #5e6e8d;
 }
 
-/* -------------------------------- 
+/* ============================
 
-Main components 
+          Componentes
 
--------------------------------- */
+=========================== */
 
 .cd-popup-trigger {
   display: block;
@@ -172,11 +172,11 @@ Main components
   }
 }
 
-/* -------------------------------- 
+/*==================
 
-xpopup 
+popup 
 
--------------------------------- */
+-===============---= */
 .cd-popup {
   position: fixed;
   left: 0;
@@ -333,9 +333,6 @@ xpopup
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   border-radius: 10px;
 }
-
-
-
 
 .searchform button {
   background: #000000;
@@ -655,58 +652,9 @@ xpopup
   width: 30%;
 }
 
-/*==========video y demas=============*/
-
-.content-info-video {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-
-  gap: 0;
-}
-
-.video-desmostracion {
-  margin: 40px 0px 40px 0px;
-
-  width: 300px;
-
-  border-radius: 16px;
-  box-shadow: rgba(0, 0, 0, 0.28) 6px 2px 16px 0px, rgba(0, 0, 0, 0.28) -6px -2px 16px 0px;
-
-}
-
-.content-info-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 5px 5px;
-
-  width: 350px;
-  padding: 2%;
-}
-
-.title-info-content {
-  color: #444444;
-  font-size: 40px;
-  font-weight: 500;
-  text-align: start;
-
-  font-family: "myFont-title-koulen";
-}
-
-.content-info-p {
-  color: #444444;
-  font-size: 15px;
-  font-weight: bold;
-  text-align: start;
-  font-family: 'Roboto Flex', sans-serif;
-}
-
 /*================FJ43=================*/
-.render-show-fj43 {
-  height: 80vh;
+.render-show- {
+  height: 60% auto;
   position: relative;
 
   display: flex;
@@ -719,7 +667,7 @@ xpopup
 
 .nombre-de-fondo {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 
