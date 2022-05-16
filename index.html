@@ -73,13 +73,25 @@
                             <a class="nav-options" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-options" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a class="nav-options popup-iniciador" href="#"><i
+                                    class="fa-solid fa-magnifying-glass"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <div class="cd-popup" style="z-index: 1000;" role="alert">
+        <div class="cd-popup-container">
+            <p></p>
+            <form class="searchform cf">
+                <input type="text" placeholder="Que es lo que buscas?">
+                <button type="submit">Buscar</button>
+            </form>
+            <a href="#0" class="close-a"><i class="fa-solid fa-circle-xmark"></i></a>
+        </div>
+    </div>
 
     <hgroup class="banner-principal">
         <article data-aos="fade-up" data-aos-duration="3000" class="banner-article-principal">
@@ -138,7 +150,7 @@
 
                 <!-- flechas -->
                 <div class="prev">
-                    <span  aria-hidden="true"><i class="fa-solid fa-angle-left"></i></span>
+                    <span aria-hidden="true"><i class="fa-solid fa-angle-left"></i></span>
                 </div>
                 <div class="next">
                     <span aria-hidden="true"><i class="fa-solid fa-angle-right"></i></span>
@@ -186,7 +198,7 @@
 
         <div class="content-car-info-fj43">
             <h1 class="title-fj43">ELIJE TU<BR>TOYOTA FJ43</h1>
-            <a href="" class="ver-mas-fj43">VER MAS <i class="fa-solid fa-angle-right"></i></a>
+            <a href="" class="ver-mas-fj43" style="color: #303030;">VER MAS <i class="fa-solid fa-angle-right"></i></a>
         </div>
 
         <img src="./img/FJ43.png" alt="" class="car-image-fj43">
@@ -274,6 +286,10 @@
     <script src="./js/index.js"></script>
     <script src="./js/slider.js"></script>
     <!---------------------------------------->
+
+    <!--------------buscardor------------------->
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./js/buscador.js"></script>
 
 </body>
 
