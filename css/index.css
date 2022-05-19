@@ -208,7 +208,7 @@ xpopup
   width: 100%;
   max-width: 400px;
 
-  cd-popup-close margin: 4em auto;
+  margin: 4em auto;
   background: #FFF;
   border-radius: .25em .25em .4em .4em;
   text-align: center;
@@ -218,8 +218,6 @@ xpopup
   -ms-transform: translateY(-40px);
   -o-transform: translateY(-40px);
   transform: translateY(-40px);
-  /* Force Hardware Acceleration in WebKit */
-  -webkit-backface-visibility: hidden;
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform;
@@ -257,7 +255,7 @@ xpopup
   transition: background-color 0.2s;
 }
 
-.no-touch .cd-popup-container .cd-buttons li:first-child a: {
+.no-touch .cd-popup-container .cd-buttons li:first-child a{
   background-color: #fc8982;
 }
 
