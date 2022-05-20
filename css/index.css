@@ -634,8 +634,9 @@ popup
 
 .see-more-intro {
   padding: 7px 12px 7px 12px;
-  color: #ffffff;
-  background-color: #444444;
+  color: #303030;
+  
+  border: #303030 2px solid;
   border-radius: 10px;
   font-size: 20px;
   font-weight: 800;
@@ -647,7 +648,7 @@ popup
 .see-more-intro:hover {
   text-decoration: none;
   color: #cbcbcb;
-  background-color: #303030;
+  
 }
 
 .intro-img {
