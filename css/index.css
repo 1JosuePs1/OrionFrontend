@@ -13,6 +13,21 @@
   src: url("../img/fuentes/LEMONMILK-Regular.otf");
 }
 
+@font-face {
+  font-family: "myFont-title-lemon-milk-light";
+  src: url("../img/fuentes/LEMONMILK-Light.otf");
+}
+
+@font-face {
+  font-family: "myFont-title-lemon-Light";
+  src: url("../img/fuentes/Aaargh.ttf");
+}
+
+@font-face {
+  font-family: "myFont-title-Quicksand";
+  src: url("../img/fuentes/Quicksand-VariableFont_wght.ttf");
+}
+
 /*====================================================*/
 
 body,
@@ -40,11 +55,139 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
 }
 
-/*CONTENEDOR DE CADA SECCIÓN*/
-.overall-block{
+/*==========pantalla de carga===========*/
+
+#content {
+  margin: 0 auto;
   padding-bottom: 50px;
+  width: 100%;
 }
 
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.no-js #loader-wrapper {
+  display: none;
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222;
+  z-index: 10;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+/* Loaded styles */
+.loaded #loader-wrapper .loader-section.section-left {
+  transform: translateX(-100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+  transform: translateX(100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 0.3s 1s ease-out;
+}
+
+/*contenido del load*/
+
+.content-load {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100012;
+
+  background: #222;
+  height: 100vh;
+  width: 100vw;
+}
+
+.img-logo-orion-load {
+  width: 40%;
+
+  position: relative;
+  animation-name: animacion-de-logo-orion;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  padding-left: 5px;
+}
+
+@keyframes animacion-de-logo-orion {
+  0% {
+    opacity: 100%;
+  }
+
+  25% {
+    opacity: 50%;
+  }
+
+  50% {
+    opacity: 100%;
+  }
+
+  75% {
+    opacity: 50%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.img-rueda-load {
+  width: 5%;
+
+  position: relative;
+  animation-name: animacion-de-rueda;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  padding-left: 5px;
+}
+
+@keyframes animacion-de-rueda {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /*=============NAV=============*/
 
@@ -87,6 +230,7 @@ nav {
 .nav-options:hover {
   color: #c1c1c1;
   text-decoration: none;
+
 
 }
 
@@ -208,7 +352,7 @@ popup
   width: 100%;
   max-width: 400px;
 
-  margin: 4em auto;
+  cd-popup-close margin: 4em auto;
   background: #FFF;
   border-radius: .25em .25em .4em .4em;
   text-align: center;
@@ -218,6 +362,8 @@ popup
   -ms-transform: translateY(-40px);
   -o-transform: translateY(-40px);
   transform: translateY(-40px);
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-backface-visibility: hidden;
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform;
@@ -255,7 +401,7 @@ popup
   transition: background-color 0.2s;
 }
 
-.no-touch .cd-popup-container .cd-buttons li:first-child a{
+.no-touch .cd-popup-container .cd-buttons li:first-child a: {
   background-color: #fc8982;
 }
 
@@ -268,7 +414,7 @@ popup
   background-color: #c5ccd8;
 }
 
-.close-a { 
+.close-a {
   position: absolute;
   top: 15%;
   left: 97%;
@@ -352,7 +498,8 @@ popup
   transition: 433ms;
 }
 
-.searchform button:hover, .fa-circle-xmark:hover {
+.searchform button:hover,
+.fa-circle-xmark:hover {
   opacity: 0.8;
 }
 
@@ -382,7 +529,8 @@ popup
   margin: 0 auto;
   padding-left: 50px;
 
-  font-size: 6rem;
+  font-family: "myFont-title-lemon-milk";
+  font-size: 80px;
   color: #ffffff;
   font-weight: bold;
 }
@@ -391,7 +539,8 @@ popup
   padding-left: 50px;
   margin: 0% auto;
 
-  font-weight: bolder;
+  font-family: "myFont-title-lemon-milk-light";
+  font-weight: bold;
   font-size: 40px;
   color: #ffffff;
 }
@@ -626,36 +775,32 @@ popup
   font-family: 'Open Sans', sans-serif;
 
   padding-bottom: 6px;
-
-
 }
 
-
-
 .see-more-intro {
-  padding: 7px 12px 7px 12px;
-  color: #303030;
-  
-  border: #303030 2px solid;
-  border-radius: 10px;
+  padding: 2px 12px 2px 12px;
+  color: #444444;
+  border: #444444 2px solid;
+
   font-size: 20px;
   font-weight: 800;
   text-align: start;
 
+  font-family: 'Open Sans', sans-serif;
   transition: 330ms;
 }
 
 .see-more-intro:hover {
   text-decoration: none;
   color: #cbcbcb;
-  
+  background-color: #303030;
 }
 
 .intro-img {
   width: 30%;
 }
 
-/*================FJ43=================*/
+/*================modelos=================*/
 .render-show- {
   height: 60% auto;
   position: relative;
@@ -725,6 +870,68 @@ popup
   z-index: 2;
   width: 35%;
 }
+
+/*============orion s4==========*/
+
+.banner-orions4 {
+  background-image: url(../img/img\ orion\ black.jpg);
+  background: -webkit-linear-gradient(to top, #1a1a1a85, #1a1a1a30, #1a1a1a85) url(../img/img\ orion\ black.jpg);
+  background: linear-gradient(to top, #1a1a1a85, #1a1a1a30, #1a1a1a85),
+    url(../img/img\ orion\ black.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+  box-sizing: content-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 10px;
+}
+
+.orion-date-presentacion {
+  color: #ffffff;
+  font-size: 20PX;
+  font-weight: 100;
+  text-align: center;
+  margin: 0% auto;
+
+  font-family: "PrimeLight", "Mont", "Fontfabric-Notdef", sans-serif;
+}
+
+.orion-title-presentacion {
+  color: #ffffff;
+  font-size: 80PX;
+  font-weight: 100;
+  text-align: center;
+  margin: 0% auto;
+
+  font-family: "myFont-title-Quicksand";
+}
+
+.linea-que-divide {
+  width: 280px;
+  height: 0.6px;
+  background-color: #ffffff;
+  margin: 2px auto;
+
+}
+
+.orion-eslogan-presentacion {
+  color: #ffffff;
+  font-size: 28PX;
+  font-weight: 100;
+  text-align: center;
+  font-family: "myFont-title-lemon-Light";
+
+  letter-spacing: 3px;
+  margin: 0% auto;
+}
+
 
 /*============footer============*/
 

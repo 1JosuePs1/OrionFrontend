@@ -10,7 +10,7 @@ body {
 /*============nav registro==================*/
 .nav-registro {
   height: 1%;
-  background-color:#181818;
+  background-color: #181818;
   margin-bottom: 20px;
   min-height: 45px;
   padding: 20px;
@@ -49,11 +49,11 @@ body {
 /* Formulario */
 
 form.form_contact {
-  
-  margin:auto;
-width: 30%;
-  
-position: relative;
+
+  margin: auto;
+  width: 30%;
+
+  position: relative;
   background: #ffffff;
   border-radius: 10px;
 
@@ -116,7 +116,7 @@ form.form_contact select,
 form.form_contact textarea {
   background-color: #ffffff;
   width: 98%;
-  
+
   padding: 10px;
 
   align-items: center;
@@ -138,7 +138,7 @@ form.form_contact textarea {
 form.form_contact input[type="submit"] {
   background-color: #303030;
 
- 
+
   width: 50%;
   margin: 10px auto;
   cursor: pointer;
@@ -225,7 +225,7 @@ form.form_contact input[type="submit"]:hover {
 .mensaje_modal h3 {
   text-align: center;
 
- 
+
   font-size: 20px;
   font-weight: 400;
 }
@@ -252,7 +252,7 @@ form.form_contact input[type="submit"]:hover {
   color: #ff0000;
   margin-right: 8px;
 
- 
+
 }
 
 #btnClose {
@@ -281,14 +281,15 @@ form.form_contact input[type="submit"]:hover {
   /*float: right; */
 }
 
-label, .cambio-de-pagina {
+label,
+.cambio-de-pagina {
   color: #444444;
   margin: 0%;
 
   transition: 333ms;
 }
 
-.cambio-de-pagina:hover{
+.cambio-de-pagina:hover {
   color: #000000;
 }
 
@@ -301,7 +302,7 @@ label, .cambio-de-pagina {
   height: 28px;
 
   position: absolute;
-  
+
   transform: translate(-50%, -50%);
 
   bottom: 19.7%;
