@@ -1,5 +1,5 @@
 body {
-  background-color: #2e2e2e;
+  background-color: #000000;
 
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -10,8 +10,8 @@ body {
 /*============nav registro==================*/
 .nav-registro {
   height: 1%;
-  background-color: #2e2e2e;
-  margin-bottom: 10px;
+  background-color:#181818;
+  margin-bottom: 20px;
   min-height: 45px;
   padding: 20px;
 }
@@ -34,11 +34,11 @@ body {
   width: 1050px;
   height: 530px;
   display: flex;
-  margin-top: 0px;
+
   border-radius: 10px;
   overflow: hidden;
 
-  sans-serif;
+
 }
 
 #contacto {
@@ -49,15 +49,11 @@ body {
 /* Formulario */
 
 form.form_contact {
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  
+  margin:auto;
+width: 30%;
+  
+position: relative;
   background: #ffffff;
   border-radius: 10px;
 
@@ -93,14 +89,14 @@ form.form_contact h2 {
   color: #303030;
   margin-bottom: 0px;
 
-  sans-serif;
+
 }
 
 form.form_contact .user_info {
   display: flex;
   flex-direction: column;
 
-  sans-serif;
+
   margin: 10px auto;
 }
 
@@ -120,7 +116,7 @@ form.form_contact select,
 form.form_contact textarea {
   background-color: #ffffff;
   width: 98%;
-  margin-bottom: 10px;
+  
   padding: 10px;
 
   align-items: center;
@@ -128,7 +124,7 @@ form.form_contact textarea {
   border: none;
   border-radius: 3px;
 
-  sans-serif;
+
   color: #5A5A5A;
   font-size: 14px;
   font-weight: 400;
@@ -142,7 +138,7 @@ form.form_contact textarea {
 form.form_contact input[type="submit"] {
   background-color: #303030;
 
-  sans-serif;
+ 
   width: 50%;
   margin: 10px auto;
   cursor: pointer;
@@ -203,14 +199,13 @@ form.form_contact input[type="submit"]:hover {
   width: 400px;
   padding: 30px 20px 15px;
 
-  sans-serif;
+
 }
 
 .contactanos {
   text-align: center;
   color: #444444;
 
-  sans-serif;
   font-weight: 900;
 }
 
@@ -230,7 +225,7 @@ form.form_contact input[type="submit"]:hover {
 .mensaje_modal h3 {
   text-align: center;
 
-  sans-serif;
+ 
   font-size: 20px;
   font-weight: 400;
 }
@@ -248,17 +243,16 @@ form.form_contact input[type="submit"]:hover {
   font-size: 16px;
   color: #444444;
 
-  sans-serif;
 }
 
 .mensaje_modal p:before {
   content: "\f00d";
-  font-family: FontAwesome;
+
   display: inline-block;
   color: #ff0000;
   margin-right: 8px;
 
-  sans-serif;
+ 
 }
 
 #btnClose {
@@ -307,11 +301,12 @@ label, .cambio-de-pagina {
   height: 28px;
 
   position: absolute;
-  top: 61.1%;
-  left: 88%;
+  
   transform: translate(-50%, -50%);
 
-  margin: 1px auto;
+  bottom: 19.7%;
+  right: 5%;
+
   background: #fcfff4;
   background: linear-gradient(to bottom, #28282810 0%, #00000000 40%, #00000000 100%);
   border-radius: 50px;

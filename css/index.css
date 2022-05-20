@@ -40,6 +40,11 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
 }
 
+/*CONTENEDOR DE CADA SECCIÓN*/
+.overall-block{
+  padding-bottom: 50px;
+}
+
 
 /*=============NAV=============*/
 
@@ -82,7 +87,6 @@ nav {
 .nav-options:hover {
   color: #c1c1c1;
   text-decoration: none;
-
 
 }
 
@@ -204,7 +208,7 @@ popup
   width: 100%;
   max-width: 400px;
 
-  cd-popup-close margin: 4em auto;
+  margin: 4em auto;
   background: #FFF;
   border-radius: .25em .25em .4em .4em;
   text-align: center;
@@ -214,8 +218,6 @@ popup
   -ms-transform: translateY(-40px);
   -o-transform: translateY(-40px);
   transform: translateY(-40px);
-  /* Force Hardware Acceleration in WebKit */
-  -webkit-backface-visibility: hidden;
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   transition-property: transform;
@@ -253,7 +255,7 @@ popup
   transition: background-color 0.2s;
 }
 
-.no-touch .cd-popup-container .cd-buttons li:first-child a: {
+.no-touch .cd-popup-container .cd-buttons li:first-child a{
   background-color: #fc8982;
 }
 
@@ -726,6 +728,7 @@ popup
 
 
 
+
 /*================slider, yo no lo cree pero es facil de modificar====================*/
 
 #sliderFrame {
@@ -733,6 +736,7 @@ popup
   width: 100%;
   height: 100vh;
   position: relative;
+  margin-bottom: 50px;
 }
 
 #sliderFrame #next,
